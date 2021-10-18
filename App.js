@@ -1,25 +1,14 @@
 import React from 'react';
 import {View, Text, SafeAreaView} from 'react-native';
+import Login from './src/Pages/Login';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import styles from './styles';
 
 const App = () => {
   return (
-    <View
-      style={{
-        backgroundColor: 'red',
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-      }}>
-      <View style={{height: 100, width: 100, backgroundColor: 'green'}}>
-        <Text>A</Text>
-      </View>
-      <View style={{height: 100, width: 100, backgroundColor: 'blue'}}>
-        <Text>B</Text>
-      </View>
-      <View style={{height: 100, width: 100, backgroundColor: 'white'}}>
-        <Text>C</Text>
-      </View>
-    </View>
+    <SafeAreaProvider>
+      <Login />
+    </SafeAreaProvider>
   );
 };
 
