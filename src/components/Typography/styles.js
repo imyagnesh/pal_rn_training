@@ -19,6 +19,12 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     letterSpacing: 0.4,
   },
+  helperText: {
+    fontSize: 12,
+    fontWeight: '300',
+    lineHeight: 16,
+    letterSpacing: 0.1,
+  },
 });
 
 export default styles;

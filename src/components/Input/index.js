@@ -1,11 +1,18 @@
-import React, {forwardRef, useState} from 'react';
-import {View, Text, TextInput} from 'react-native';
+import React, {useState} from 'react';
+import {View, TextInput} from 'react-native';
 import styles from './styles';
 import VisibilityIcon from '../../../assets/icons/visibility.svg';
 import VisibilityOffIcon from '../../../assets/icons/visibility_off.svg';
 import {BorderlessButton} from 'react-native-gesture-handler';
+import Typography from '../Typography';
 
-const Input = forwardRef(({secureTextEntry, ...props}, ref) => {
+const Input = ({
+  field: {name, value},
+  form: {touched, errors, handleBlur, handleChange},
+  secureTextEntry,
+  innerRef,
+  ...props
+}) => {
   const [isPasswordVisible, setisPasswordVisible] = useState(false);
   const iconProps = {
     height: 24,
@@ -18,8 +25,12 @@ const Input = forwardRef(({secureTextEntry, ...props}, ref) => {
         margin: 10,
       }}>
       <TextInput
-        ref={ref}
-        style={styles.input}
+        ref={innerRef}
+        name={name}
+        value={value}
+        onChangeText={handleChange(name)}
+        onBlur={handleBlur(name)}
+        style={[styles.input]}
         returnKeyType="go"
         secureTextEntry={secureTextEntry && !isPasswordVisible}
         {...props}
@@ -43,8 +54,13 @@ const Input = forwardRef(({secureTextEntry, ...props}, ref) => {
           )}
         </BorderlessButton>
       )}
+      {!!touched[name] && errors[name] && (
+        <Typography variant="helperText" style={{color: 'red'}}>
+          {errors[name]}
+        </Typography>
+      )}
     </View>
   );
-});
+};
 
 export default Input;

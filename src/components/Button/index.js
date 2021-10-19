@@ -17,3 +17,93 @@ const Button = ({title, btnStyle, textStyle, ...props}) => {
 };
 
 export default Button;
+
+{
+  /* <TouchableHighlight
+        onPress={() => {}}
+        style={{margin: 10, borderRadius: 8}}>
+        <View
+          style={{
+            backgroundColor: 'royalblue',
+            height: 44,
+            borderRadius: 8,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Typography variant="btn" style={{color: '#fff'}}>
+            {`Login`.toUpperCase()}
+          </Typography>
+        </View>
+      </TouchableHighlight>
+
+      <TouchableOpacity
+        activeOpacity={0.8}
+        onPress={() => {}}
+        style={{margin: 10, borderRadius: 8}}>
+        <View
+          style={{
+            backgroundColor: 'royalblue',
+            height: 44,
+            borderRadius: 8,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Typography variant="btn" style={{color: '#fff'}}>
+            {`Login`.toUpperCase()}
+          </Typography>
+        </View>
+      </TouchableOpacity>
+
+      <TouchableNativeFeedback onPress={() => {}}>
+        <View
+          style={{
+            backgroundColor: 'royalblue',
+            height: 44,
+            borderRadius: 8,
+            justifyContent: 'center',
+            alignItems: 'center',
+            margin: 10,
+          }}>
+          <Typography variant="btn" style={{color: '#fff'}}>
+            {`Login`.toUpperCase()}
+          </Typography>
+        </View>
+      </TouchableNativeFeedback>
+
+      <TouchableWithoutFeedback onPress={() => {}}>
+        <View
+          style={{
+            backgroundColor: 'royalblue',
+            height: 44,
+            borderRadius: 8,
+            justifyContent: 'center',
+            alignItems: 'center',
+            margin: 10,
+          }}>
+          <Typography variant="btn" style={{color: '#fff'}}>
+            {`Login`.toUpperCase()}
+          </Typography>
+        </View>
+      </TouchableWithoutFeedback>
+
+      <Pressable
+        onPress={() => {}}
+        android_ripple={{
+          color: 'red',
+        }}
+        style={{
+          backgroundColor: 'royalblue',
+          height: 44,
+          borderRadius: 8,
+          justifyContent: 'center',
+          alignItems: 'center',
+          margin: 10,
+        }}>
+        <Typography variant="btn" style={{color: '#fff'}}>
+          {`Login`.toUpperCase()}
+        </Typography>
+      </Pressable> */
+}
+{
+  /* <Button title="Login" /> */
+}

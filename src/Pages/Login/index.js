@@ -1,162 +1,117 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {
   ImageBackground,
   StatusBar,
-  TouchableHighlight,
-  TouchableOpacity,
-  TouchableNativeFeedback,
-  TouchableWithoutFeedback,
   View,
-  Pressable,
+  KeyboardAvoidingView,
+  Platform,
+  Keyboard,
 } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import Typography from '../../components/Typography';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import Input from '../../components/Input';
-import {RectButton} from 'react-native-gesture-handler';
+import {loginFields, loginInitValues} from './fields';
+import Form from '../../components/Form';
+import Animated, {
+  useSharedValue,
+  useAnimatedStyle,
+  withTiming,
+  Easing,
+} from 'react-native-reanimated';
 import Button from '../../components/Button';
 
+const AnimatedFastImage = Animated.createAnimatedComponent(FastImage);
+
 const Login = () => {
-  const {top} = useSafeAreaInsets();
   const passwordInput = useRef(null);
+  const [isKeyboardVisible, setIsKeyboardVisible] = useState(false);
+  const opacity = useSharedValue(1);
+
+  useEffect(() => {
+    const keyboardWillShow = Keyboard.addListener('keyboardWillShow', () => {
+      setIsKeyboardVisible(true);
+      opacity.value = 0;
+    });
+    const keyboardWillHide = Keyboard.addListener('keyboardWillHide', () => {
+      setIsKeyboardVisible(false);
+      opacity.value = 1;
+    });
+    const keyboardDidShow = Keyboard.addListener('keyboardDidShow', () => {
+      setIsKeyboardVisible(true);
+      opacity.value = 0;
+    });
+    const keyboardDidHide = Keyboard.addListener('keyboardDidHide', () => {
+      setIsKeyboardVisible(false);
+      opacity.value = 1;
+    });
+    return () => {
+      keyboardWillShow.remove();
+      keyboardWillHide.remove();
+      keyboardDidShow.remove();
+      keyboardDidHide.remove();
+    };
+  }, []);
+
+  const animatedStyle = useAnimatedStyle(() => {
+    return {
+      opacity: withTiming(opacity.value),
+    };
+  });
+
   return (
     <ImageBackground
       style={{flex: 1}}
       source={require('../../../assets/images/backgroundImage/background-image.jpg')}>
-      <StatusBar hidden />
-      <FastImage
-        source={{
-          uri: 'https://reactjs.org/logo-og.png',
-          priority: FastImage.priority.high,
-        }}
-        style={{
-          height: 100,
-          aspectRatio: 2 / 2,
-          marginTop: top + 10,
-          alignSelf: 'center',
-        }}
-        resizeMode="cover"
-      />
-      {/* <FastImage
-        source={{
-          uri: 'https://res.cloudinary.com/dnxzgxivo/image/upload/f_auto,h_520/v1594972531/IMG_3191_removebg_761a268743.png',
-          priority: FastImage.priority.low,
-        }}
-        style={{
-          height: 200,
-        }}
-        resizeMode="cover"
-      /> */}
-      <Typography variant="h1" style={{textAlign: 'center'}}>
-        Login
-      </Typography>
-      <Input
-        placeholder="Username"
-        keyboardType="email-address"
-        returnKeyType="next"
-        autoCapitalize="none"
-        autoComplete="email"
-        textContentType="emailAddress"
-        onSubmitEditing={() => {
-          passwordInput.current.focus();
-        }}
-      />
-      <Input
-        ref={passwordInput}
-        placeholder="Password"
-        secureTextEntry
-        returnKeyType="go"
-        autoComplete="password"
-        textContentType="password"
-      />
-
-      <Button title="Login" />
-
-      {/* <TouchableHighlight
-        onPress={() => {}}
-        style={{margin: 10, borderRadius: 8}}>
-        <View
-          style={{
-            backgroundColor: 'royalblue',
-            height: 44,
-            borderRadius: 8,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-          <Typography variant="btn" style={{color: '#fff'}}>
-            {`Login`.toUpperCase()}
-          </Typography>
+      <KeyboardAvoidingView
+        style={{flex: 1}}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+        <StatusBar hidden />
+        {/* <Animated.View
+          style={[
+            {
+              height: 100,
+              width: 100,
+              backgroundColor: 'red',
+              borderRadius: 50,
+            },
+            animatedStyle,
+          ]}></Animated.View>
+        <Button
+          title="Move Ball"
+          onPress={() => {
+            translateX.value = 200;
+          }}
+        /> */}
+        <View style={{flex: 1, justifyContent: 'center', opacity: 1}}>
+          <AnimatedFastImage
+            source={{
+              uri: 'https://reactjs.org/logo-og.png',
+              priority: FastImage.priority.high,
+            }}
+            style={[
+              {
+                height: 100,
+                aspectRatio: 2 / 2,
+                alignSelf: 'center',
+              },
+              animatedStyle,
+            ]}
+            resizeMode="cover"
+          />
         </View>
-      </TouchableHighlight>
-
-      <TouchableOpacity
-        activeOpacity={0.8}
-        onPress={() => {}}
-        style={{margin: 10, borderRadius: 8}}>
-        <View
-          style={{
-            backgroundColor: 'royalblue',
-            height: 44,
-            borderRadius: 8,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}>
-          <Typography variant="btn" style={{color: '#fff'}}>
-            {`Login`.toUpperCase()}
+        <View style={{flex: 1, justifyContent: 'flex-end'}}>
+          <Typography variant="h1" style={{textAlign: 'center'}}>
+            Login
           </Typography>
+          <Form
+            initialValues={loginInitValues}
+            onSubmit={values => {
+              console.warn(values);
+            }}
+            fields={loginFields}
+            btnProps={{title: 'Login'}}
+          />
         </View>
-      </TouchableOpacity>
-
-      <TouchableNativeFeedback onPress={() => {}}>
-        <View
-          style={{
-            backgroundColor: 'royalblue',
-            height: 44,
-            borderRadius: 8,
-            justifyContent: 'center',
-            alignItems: 'center',
-            margin: 10,
-          }}>
-          <Typography variant="btn" style={{color: '#fff'}}>
-            {`Login`.toUpperCase()}
-          </Typography>
-        </View>
-      </TouchableNativeFeedback>
-
-      <TouchableWithoutFeedback onPress={() => {}}>
-        <View
-          style={{
-            backgroundColor: 'royalblue',
-            height: 44,
-            borderRadius: 8,
-            justifyContent: 'center',
-            alignItems: 'center',
-            margin: 10,
-          }}>
-          <Typography variant="btn" style={{color: '#fff'}}>
-            {`Login`.toUpperCase()}
-          </Typography>
-        </View>
-      </TouchableWithoutFeedback>
-
-      <Pressable
-        onPress={() => {}}
-        android_ripple={{
-          color: 'red',
-        }}
-        style={{
-          backgroundColor: 'royalblue',
-          height: 44,
-          borderRadius: 8,
-          justifyContent: 'center',
-          alignItems: 'center',
-          margin: 10,
-        }}>
-        <Typography variant="btn" style={{color: '#fff'}}>
-          {`Login`.toUpperCase()}
-        </Typography>
-      </Pressable> */}
-      {/* <Button title="Login" /> */}
+      </KeyboardAvoidingView>
     </ImageBackground>
   );
 };
