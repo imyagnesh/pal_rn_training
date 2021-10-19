@@ -13,6 +13,12 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     letterSpacing: 0.2,
   },
+  btn: {
+    fontSize: 18,
+    fontWeight: '500',
+    lineHeight: 22,
+    letterSpacing: 0.4,
+  },
 });
 
 export default styles;
