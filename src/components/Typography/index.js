@@ -21,7 +21,7 @@ const Typography = ({variant, style, ...rest}) => {
 };
 
 Typography.propTypes = {
-  variant: PropTypes.oneOf(['h1', 'body1', 'btn']).isRequired,
+  variant: PropTypes.oneOf(['h1', 'body1', 'body2', 'btn']).isRequired,
   style: Text.propTypes.style,
 };
 

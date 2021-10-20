@@ -1,10 +1,9 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect} from 'react';
 import {
   ImageBackground,
   StatusBar,
   View,
   KeyboardAvoidingView,
-  Platform,
   Keyboard,
 } from 'react-native';
 import FastImage from 'react-native-fast-image';
@@ -15,32 +14,24 @@ import Animated, {
   useSharedValue,
   useAnimatedStyle,
   withTiming,
-  Easing,
 } from 'react-native-reanimated';
-import Button from '../../components/Button';
 
 const AnimatedFastImage = Animated.createAnimatedComponent(FastImage);
 
-const Login = () => {
-  const passwordInput = useRef(null);
-  const [isKeyboardVisible, setIsKeyboardVisible] = useState(false);
+const Login = ({navigation: {navigate}}) => {
   const opacity = useSharedValue(1);
 
   useEffect(() => {
     const keyboardWillShow = Keyboard.addListener('keyboardWillShow', () => {
-      setIsKeyboardVisible(true);
       opacity.value = 0;
     });
     const keyboardWillHide = Keyboard.addListener('keyboardWillHide', () => {
-      setIsKeyboardVisible(false);
       opacity.value = 1;
     });
     const keyboardDidShow = Keyboard.addListener('keyboardDidShow', () => {
-      setIsKeyboardVisible(true);
       opacity.value = 0;
     });
     const keyboardDidHide = Keyboard.addListener('keyboardDidHide', () => {
-      setIsKeyboardVisible(false);
       opacity.value = 1;
     });
     return () => {
@@ -61,9 +52,7 @@ const Login = () => {
     <ImageBackground
       style={{flex: 1}}
       source={require('../../../assets/images/backgroundImage/background-image.jpg')}>
-      <KeyboardAvoidingView
-        style={{flex: 1}}
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+      <KeyboardAvoidingView style={{flex: 1}} behavior="padding">
         <StatusBar hidden />
         {/* <Animated.View
           style={[
@@ -111,6 +100,17 @@ const Login = () => {
             btnProps={{title: 'Login'}}
           />
         </View>
+        <Typography
+          variant="body2"
+          style={{textAlign: 'center', color: '#fff', paddingVertical: 10}}>
+          Don't have an account? Please{' '}
+          <Typography
+            onPress={() => navigate('Register')}
+            variant="body1"
+            style={{color: 'red'}}>
+            Sign In
+          </Typography>
+        </Typography>
       </KeyboardAvoidingView>
     </ImageBackground>
   );

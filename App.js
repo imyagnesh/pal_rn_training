@@ -1,14 +1,36 @@
 import React from 'react';
-import {View, Text, SafeAreaView} from 'react-native';
 import Login from './src/Pages/Login';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import styles from './styles';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Register from './src/Pages/Register';
+
+const MainStack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <SafeAreaProvider>
-      <Login />
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <MainStack.Navigator>
+        <MainStack.Screen
+          options={() => {
+            return {
+              headerShown: false,
+            };
+          }}
+          name="Login"
+          component={Login}
+        />
+        <MainStack.Screen
+          options={() => {
+            return {
+              headerTransparent: true,
+              headerShadowVisible: false,
+            };
+          }}
+          name="Register"
+          component={Register}
+        />
+      </MainStack.Navigator>
+    </NavigationContainer>
   );
 };
 

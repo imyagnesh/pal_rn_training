@@ -38,6 +38,8 @@ export const loginFields = [
   {
     name: 'rememberMe',
     component: Checkbox,
+    text: 'Remember Me',
+    containerStyle: {alignSelf: 'flex-end'},
   },
 ];
 

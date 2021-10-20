@@ -13,6 +13,12 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     letterSpacing: 0.2,
   },
+  body2: {
+    fontSize: 18,
+    fontWeight: '400',
+    lineHeight: 20,
+    letterSpacing: 0.2,
+  },
   btn: {
     fontSize: 18,
     fontWeight: '500',
