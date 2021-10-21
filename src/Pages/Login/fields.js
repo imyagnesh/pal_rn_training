@@ -7,7 +7,7 @@ const passwordInput = createRef();
 
 export const loginFields = [
   {
-    name: 'username',
+    name: 'email',
     component: Input,
     placeholder: 'Username',
     keyboardType: 'email-address',
@@ -44,6 +44,7 @@ export const loginFields = [
 ];
 
 export const loginInitValues = {
-  username: '',
+  email: '',
   password: '',
+  rememberMe: false,
 };

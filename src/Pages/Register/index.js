@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {ImageBackground, StatusBar, KeyboardAvoidingView} from 'react-native';
 import {useHeaderHeight} from '@react-navigation/elements';
 import {registerFields, registerInitValues} from './fields';
@@ -8,9 +8,11 @@ import parse from 'date-fns/parse';
 import Config from 'react-native-config';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axiosInstance from '../../utils/axiosInstance';
+import {AuthContext} from '../../context/AuthContext';
 
 const Register = ({navigation: {navigate}}) => {
   const headerHeight = useHeaderHeight();
+  const {setToken} = useContext(AuthContext);
 
   const onSubmit = async (values, actions) => {
     try {
@@ -21,8 +23,9 @@ const Register = ({navigation: {navigate}}) => {
         age: differenceInYears(new Date(), parsedBirthDate),
       };
       const res = await axiosInstance.post('register', data);
-      await AsyncStorage.setItem('@userInfo', res.data.user);
+      await AsyncStorage.setItem('@userInfo', JSON.stringify(res.data.user));
       actions.resetForm();
+      setToken(res.data.accessToken);
     } catch (error) {
       actions.setErrors({serverError: error.response.data});
     }
