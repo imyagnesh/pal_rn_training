@@ -39,6 +39,14 @@
 	<string></string>
 	<key>NSFaceIDUsageDescription</key>
 	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please Provide Library access to take your profile pic</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Please Provide camera access to take your profile pic</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Please Provide video access to take your profile pic</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Please Provide microphone access to take your profile pic</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

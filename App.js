@@ -5,14 +5,15 @@ import {
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import AuthProvider, {AuthContext} from './src/context/AuthContext';
 import IconButton from './src/components/IconButton';
 
 const MainStack = createNativeStackNavigator();
 const MainTab = createBottomTabNavigator();
+const MainDrawer = createDrawerNavigator();
 
 const MainTabNavigator = () => {
-  const {clearToken} = useContext(AuthContext);
   return (
     <MainTab.Navigator
       screenOptions={({route}) => ({
@@ -31,9 +32,27 @@ const MainTabNavigator = () => {
               return null;
           }
         },
+        headerShown: false,
       })}>
       <MainTab.Screen
         name="HomePage"
+        options={{}}
+        getComponent={() => require('./src/Pages/Home').default}
+      />
+      <MainTab.Screen
+        name="SettingsPage"
+        getComponent={() => require('./src/Pages/Settings').default}
+      />
+    </MainTab.Navigator>
+  );
+};
+
+const MainDrawerNavigator = () => {
+  const {clearToken} = useContext(AuthContext);
+  return (
+    <MainDrawer.Navigator>
+      <MainDrawer.Screen
+        name="HomeDrawer"
         options={{
           headerRight: () => {
             return (
@@ -46,13 +65,13 @@ const MainTabNavigator = () => {
             );
           },
         }}
-        getComponent={() => require('./src/Pages/Home').default}
+        component={MainTabNavigator}
       />
-      <MainTab.Screen
-        name="SettingsPage"
-        getComponent={() => require('./src/Pages/Settings').default}
+      <MainDrawer.Screen
+        name="contact"
+        getComponent={() => require('./src/Pages/Contact').default}
       />
-    </MainTab.Navigator>
+    </MainDrawer.Navigator>
   );
 };
 
@@ -96,7 +115,7 @@ const Main = () => {
               headerShown: false,
             }}
             name="Home"
-            component={MainTabNavigator}
+            component={MainDrawerNavigator}
           />
         )}
       </MainStack.Navigator>
