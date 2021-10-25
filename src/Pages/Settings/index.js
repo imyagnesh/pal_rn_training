@@ -2,10 +2,13 @@ import React, {useRef, useState} from 'react';
 import {View} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import {BorderlessButton} from 'react-native-gesture-handler';
+import {connect} from 'react-redux';
 import ImagePicker from '../../ImagePicker';
 
-const Settings = () => {
+const Settings = ({products, cart}) => {
   const imagePickerRef = useRef(null);
+
+  console.warn(products.loading);
 
   const [profileImage, setProfileImage] = useState(null);
 
@@ -43,4 +46,15 @@ const Settings = () => {
   );
 };
 
-export default Settings;
+const mapStateToProps = ({products, cart}) => {
+  return {
+    products,
+    cart,
+  };
+};
+
+const mapDispatchToProps = () => {
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Settings);

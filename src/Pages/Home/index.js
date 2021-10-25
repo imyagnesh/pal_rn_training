@@ -1,12 +1,16 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import {connect} from 'react-redux';
+import Home from './Home';
 
-const Home = () => {
-  return (
-    <View>
-      <Text>Home Page</Text>
-    </View>
-  );
+const mapStateToProps = ({products, cart}) => {
+  return {
+    products,
+  };
 };
 
-export default Home;
+const mapDispatchToProps = dispatch => {
+  return {
+    loadProducts: () => dispatch({type: 'LOAD_PRODUCTS_REQUEST'}),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -8,10 +8,28 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import AuthProvider, {AuthContext} from './src/context/AuthContext';
 import IconButton from './src/components/IconButton';
+import {Provider} from 'react-redux';
+import store from './src/configureStore';
 
 const MainStack = createNativeStackNavigator();
+const HomeStack = createNativeStackNavigator();
 const MainTab = createBottomTabNavigator();
 const MainDrawer = createDrawerNavigator();
+
+const HomeNavigation = () => {
+  return (
+    <HomeStack.Navigator>
+      <HomeStack.Screen
+        name="Home"
+        getComponent={() => require('./src/Pages/Home').default}
+      />
+      <HomeStack.Screen
+        name="AnimationPage"
+        getComponent={() => require('./src/Pages/AnimationPage').default}
+      />
+    </HomeStack.Navigator>
+  );
+};
 
 const MainTabNavigator = () => {
   return (
@@ -34,11 +52,7 @@ const MainTabNavigator = () => {
         },
         headerShown: false,
       })}>
-      <MainTab.Screen
-        name="HomePage"
-        options={{}}
-        getComponent={() => require('./src/Pages/Home').default}
-      />
+      <MainTab.Screen name="HomePage" component={HomeNavigation} />
       <MainTab.Screen
         name="SettingsPage"
         getComponent={() => require('./src/Pages/Settings').default}
@@ -110,13 +124,21 @@ const Main = () => {
           </MainStack.Group>
         )}
         {!!isAuthenticated && (
-          <MainStack.Screen
-            options={{
-              headerShown: false,
-            }}
-            name="Home"
-            component={MainDrawerNavigator}
-          />
+          <MainStack.Group>
+            <MainStack.Screen
+              options={{
+                headerShown: false,
+              }}
+              name="Home"
+              component={MainDrawerNavigator}
+            />
+            <MainStack.Group screenOptions={{presentation: 'modal'}}>
+              <HomeStack.Screen
+                name="Details"
+                getComponent={() => require('./src/Pages/Details').default}
+              />
+            </MainStack.Group>
+          </MainStack.Group>
         )}
       </MainStack.Navigator>
     </NavigationContainer>
@@ -125,9 +147,11 @@ const Main = () => {
 
 const App = () => {
   return (
-    <AuthProvider>
-      <Main />
-    </AuthProvider>
+    <Provider store={store}>
+      <AuthProvider>
+        <Main />
+      </AuthProvider>
+    </Provider>
   );
 };
 

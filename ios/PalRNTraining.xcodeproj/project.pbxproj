@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PalRNTrainingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PalRNTrainingTests.m */; };
-		11F9A488ED79A7FC473E7041 /* libPods-PalRNTraining.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B931464298C148CD15D746 /* libPods-PalRNTraining.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		6CDABC0EE2B82A3CA8F84465 /* libPods-PalRNTraining-PalRNTrainingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C7B582094AB596F82582E2 /* libPods-PalRNTraining-PalRNTrainingTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		CD2C46C8CE405F1924092D2C /* libPods-PalRNTraining.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F81CDAE419AD8CA70FF0A90F /* libPods-PalRNTraining.a */; };
+		EF3DBC58CFD2BCE86FF50F01 /* libPods-PalRNTraining-PalRNTrainingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 691A52A7560AF2F917295522 /* libPods-PalRNTraining-PalRNTrainingTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +30,20 @@
 		00E356EE1AD99517003FC87E /* PalRNTrainingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalRNTrainingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PalRNTrainingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PalRNTrainingTests.m; sourceTree = "<group>"; };
-		0F86114B345C10BFB9AA59BA /* Pods-PalRNTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PalRNTraining.release.xcconfig"; path = "Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PalRNTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PalRNTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PalRNTraining/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PalRNTraining/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PalRNTraining/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PalRNTraining/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PalRNTraining/main.m; sourceTree = "<group>"; };
-		28C7B582094AB596F82582E2 /* libPods-PalRNTraining-PalRNTrainingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PalRNTraining-PalRNTrainingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		55080DDED884C3BF039D80DB /* Pods-PalRNTraining-PalRNTrainingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PalRNTraining-PalRNTrainingTests.debug.xcconfig"; path = "Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		140D04B364641FE28963ACB7 /* Pods-PalRNTraining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PalRNTraining.debug.xcconfig"; path = "Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining.debug.xcconfig"; sourceTree = "<group>"; };
+		2DB0B2D783CB863FE6BE00A1 /* Pods-PalRNTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PalRNTraining.release.xcconfig"; path = "Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining.release.xcconfig"; sourceTree = "<group>"; };
+		47C235850D0EF4483C957644 /* Pods-PalRNTraining-PalRNTrainingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PalRNTraining-PalRNTrainingTests.debug.xcconfig"; path = "Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		691A52A7560AF2F917295522 /* libPods-PalRNTraining-PalRNTrainingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PalRNTraining-PalRNTrainingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PalRNTraining/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A0B931464298C148CD15D746 /* libPods-PalRNTraining.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PalRNTraining.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7769562600E753A920E6BAC /* Pods-PalRNTraining-PalRNTrainingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PalRNTraining-PalRNTrainingTests.release.xcconfig"; path = "Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests.release.xcconfig"; sourceTree = "<group>"; };
-		D5D13F946402BC452E475E86 /* Pods-PalRNTraining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PalRNTraining.debug.xcconfig"; path = "Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining.debug.xcconfig"; sourceTree = "<group>"; };
+		CC161F607DF075AD7CD8ABD1 /* Pods-PalRNTraining-PalRNTrainingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PalRNTraining-PalRNTrainingTests.release.xcconfig"; path = "Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F81CDAE419AD8CA70FF0A90F /* libPods-PalRNTraining.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PalRNTraining.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CDABC0EE2B82A3CA8F84465 /* libPods-PalRNTraining-PalRNTrainingTests.a in Frameworks */,
+				EF3DBC58CFD2BCE86FF50F01 /* libPods-PalRNTraining-PalRNTrainingTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F9A488ED79A7FC473E7041 /* libPods-PalRNTraining.a in Frameworks */,
+				CD2C46C8CE405F1924092D2C /* libPods-PalRNTraining.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +83,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		042033F050A31AFB7083F70D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				140D04B364641FE28963ACB7 /* Pods-PalRNTraining.debug.xcconfig */,
+				2DB0B2D783CB863FE6BE00A1 /* Pods-PalRNTraining.release.xcconfig */,
+				47C235850D0EF4483C957644 /* Pods-PalRNTraining-PalRNTrainingTests.debug.xcconfig */,
+				CC161F607DF075AD7CD8ABD1 /* Pods-PalRNTraining-PalRNTrainingTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* PalRNTraining */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				A0B931464298C148CD15D746 /* libPods-PalRNTraining.a */,
-				28C7B582094AB596F82582E2 /* libPods-PalRNTraining-PalRNTrainingTests.a */,
+				F81CDAE419AD8CA70FF0A90F /* libPods-PalRNTraining.a */,
+				691A52A7560AF2F917295522 /* libPods-PalRNTraining-PalRNTrainingTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,7 +133,7 @@
 				00E356EF1AD99517003FC87E /* PalRNTrainingTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				DCA9A4E41180CE208C1C8CD4 /* Pods */,
+				042033F050A31AFB7083F70D /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -137,18 +149,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DCA9A4E41180CE208C1C8CD4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D5D13F946402BC452E475E86 /* Pods-PalRNTraining.debug.xcconfig */,
-				0F86114B345C10BFB9AA59BA /* Pods-PalRNTraining.release.xcconfig */,
-				55080DDED884C3BF039D80DB /* Pods-PalRNTraining-PalRNTrainingTests.debug.xcconfig */,
-				A7769562600E753A920E6BAC /* Pods-PalRNTraining-PalRNTrainingTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,12 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PalRNTrainingTests" */;
 			buildPhases = (
-				3B8ADCB8BE8E498EBD5529C4 /* [CP] Check Pods Manifest.lock */,
+				C116924D6F2BCC16547067FC /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				5FF179351E4EAFB89A8E8DD2 /* [CP] Embed Pods Frameworks */,
-				AFC90EF39583079DEAACDA15 /* [CP] Copy Pods Resources */,
+				25F569AC66849ACE68C6DB70 /* [CP] Embed Pods Frameworks */,
+				63DBAFE59CEC119F31D8BB60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,14 +177,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "PalRNTraining" */;
 			buildPhases = (
-				2C1C2E24945A2C60C691CD33 /* [CP] Check Pods Manifest.lock */,
+				2FF3CFFF158EEEC8FC2DE014 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				85CCBFFC6F5F757675BB049A /* [CP] Embed Pods Frameworks */,
-				334164EABA11ED0728E50354 /* [CP] Copy Pods Resources */,
+				14F094DB5622E1988AA94068 /* [CP] Embed Pods Frameworks */,
+				EC82529A74266783FE0DE8AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,7 +265,41 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		2C1C2E24945A2C60C691CD33 /* [CP] Check Pods Manifest.lock */ = {
+		14F094DB5622E1988AA94068 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25F569AC66849ACE68C6DB70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FF3CFFF158EEEC8FC2DE014 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -287,24 +321,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		334164EABA11ED0728E50354 /* [CP] Copy Pods Resources */ = {
+		63DBAFE59CEC119F31D8BB60 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3B8ADCB8BE8E498EBD5529C4 /* [CP] Check Pods Manifest.lock */ = {
+		C116924D6F2BCC16547067FC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,55 +360,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5FF179351E4EAFB89A8E8DD2 /* [CP] Embed Pods Frameworks */ = {
+		EC82529A74266783FE0DE8AA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		85CCBFFC6F5F757675BB049A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AFC90EF39583079DEAACDA15 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining-PalRNTrainingTests/Pods-PalRNTraining-PalRNTrainingTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PalRNTraining/Pods-PalRNTraining-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -429,7 +429,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55080DDED884C3BF039D80DB /* Pods-PalRNTraining-PalRNTrainingTests.debug.xcconfig */;
+			baseConfigurationReference = 47C235850D0EF4483C957644 /* Pods-PalRNTraining-PalRNTrainingTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -456,7 +456,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7769562600E753A920E6BAC /* Pods-PalRNTraining-PalRNTrainingTests.release.xcconfig */;
+			baseConfigurationReference = CC161F607DF075AD7CD8ABD1 /* Pods-PalRNTraining-PalRNTrainingTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -480,7 +480,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5D13F946402BC452E475E86 /* Pods-PalRNTraining.debug.xcconfig */;
+			baseConfigurationReference = 140D04B364641FE28963ACB7 /* Pods-PalRNTraining.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -506,7 +506,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F86114B345C10BFB9AA59BA /* Pods-PalRNTraining.release.xcconfig */;
+			baseConfigurationReference = 2DB0B2D783CB863FE6BE00A1 /* Pods-PalRNTraining.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
